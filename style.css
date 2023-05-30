@@ -1,0 +1,253 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  background-color: #f3f2ef;
+}
+
+/* Menghilangkan scroll bar standar */
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+header {
+  z-index: 1;
+  background-color: transparent;
+  width: 100%;
+  position: relative;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+  padding: 1% 4%;
+}
+
+.transparent {
+  color: white !important;
+  background-color: transparent;
+  transition: all 1s;
+}
+
+.solid {
+  color: white !important;
+  background-color: #224c1a;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+a:-webkit-any-link {
+  color: inherit !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  flex-direction: column;
+  z-index: 0;
+  position: relative;
+}
+
+.text-container {
+  z-index: 1;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+}
+
+.header-word1 {
+  margin: 0 2%;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.header-word2 {
+  margin: 0;
+  font-size: 55px;
+  font-weight: bold;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1% 4%;
+  flex-direction: row;
+}
+
+article {
+  flex: 2;
+}
+
+.content article div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  margin: 2% 0 5% 0;
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.content article div img {
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 100%;
+}
+
+.content article div span {
+  color: gray;
+  font-family: monospace;
+  margin: 2% 0 0 2%;
+}
+.content article div h4 {
+  margin: 1% 2%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.content article div p {
+  margin: 0 2% 4% 2%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 11pt;
+  text-align: justify;
+}
+
+aside {
+  flex: 1;
+  margin: 1% 1% 1% 5%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+aside div#kontak {
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  padding-bottom: 10%;
+}
+
+aside div img.foto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 35%;
+}
+
+aside div img.banner {
+  width: 100%;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
+
+aside div p.nama-kontak {
+  margin: 20% 0 0 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14pt;
+  text-align: center;
+  font-weight: bold;
+}
+aside div p.pekerjaan-kontak {
+  margin: 1% 0;
+  font-family: sans-serif;
+  font-size: 11pt;
+  text-align: center;
+  color: gray;
+}
+aside div p {
+  margin: 1% 5%;
+}
+
+.highlight {
+  animation: nyala 0.5s;
+}
+
+@keyframes nyala {
+  0% {
+    background-color: initial;
+  }
+  50% {
+    background-color: greenyellow;
+  }
+  100% {
+    background-color: initial;
+  }
+}
+
+footer {
+  background-color: #224c1a;
+  color: white;
+  padding: 0.2% 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  aside {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
