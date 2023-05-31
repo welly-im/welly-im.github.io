@@ -186,7 +186,7 @@ aside div#kontak {
 
 aside div img.foto {
   width: 150px;
-  height: 150px;
+  height: auto;
   border-radius: 50%;
   position: absolute;
   top: 5%;
@@ -240,14 +240,258 @@ footer {
   padding: 0.2% 0;
   text-align: center;
 }
+@media screen and (min-width: 1023px) and (max-width: 1440px) {
+  aside div img.foto {
+    width: 34%;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 35%;
+  }
 
-@media screen and (max-width: 768px) {
-  main {
-    flex-direction: column;
+  aside div p.nama-kontak {
+    margin: 25% 0 0 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    font-weight: bold;
+  }
+  aside div p.pekerjaan-kontak {
+    margin: 1% 0;
+    font-family: sans-serif;
+    font-size: 11pt;
+    text-align: center;
+    color: gray;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .text-container {
+    z-index: 1;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+
+  .header-word1 {
+    margin: 0 2%;
+    font-size: 17px;
+    font-weight: lighter;
+  }
+
+  .header-word2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .content article div span {
+    color: gray;
+    font-family: monospace;
+    margin: 2% 0 0 4%;
+  }
+  .content article div h4 {
+    margin: 1% 4%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  .content article div p {
+    margin: 0 4% 4% 4%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: 10pt;
+    text-align: justify;
+  }
+
+  aside div img.foto {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 35%;
+  }
+
+  aside div p {
+    margin: 1% 5%;
+    font-size: 9pt;
+  }
+
+  aside div p.nama-kontak {
+    margin: 20% 0 0 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  header {
+    z-index: 1;
+    background-color: transparent;
+    width: 100%;
+    position: relative;
+    display: none;
+  }
+  .text-container {
+    z-index: 1;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+
+  .header-word1 {
+    margin: 0 2%;
+    font-size: 17px;
+    font-weight: lighter;
+  }
+
+  .header-word2 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  article {
+    flex: 0;
+  }
+
+  .content article div span {
+    color: gray;
+    font-family: monospace;
+    margin: 2% 0 0 4%;
+  }
+
+  .content article div h4 {
+    margin: 1% 4%;
+    font-size: 11pt;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+
+  .content article div p {
+    margin: 0 4% 4% 4%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: 9pt;
+    text-align: justify;
+  }
+
+  aside div img.foto {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 35%;
   }
 
   aside {
-    margin-right: 0;
-    margin-bottom: 1rem;
+    flex: 0;
+    margin: 1%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .content {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1% 4%;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    z-index: 1;
+    background-color: transparent;
+    width: 100%;
+    position: relative;
+    display: none;
+  }
+  .text-container {
+    z-index: 1;
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+
+  .header-word1 {
+    margin: 0 2%;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+
+  .header-word2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  article {
+    flex: 0;
+  }
+  .content article div span {
+    color: gray;
+    font-family: monospace;
+    margin: 2% 0 0 4%;
+  }
+  .content article div h4 {
+    margin: 1% 4%;
+    font-size: 11pt;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .content article div p {
+    margin: 0 4% 4% 4%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    font-size: 8pt;
+    text-align: justify;
+  }
+
+  aside div img.foto {
+    width: 30%;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 35%;
+  }
+
+  aside {
+    flex: 0;
+    margin: 1%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+  }
+  .content {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1% 4%;
+    flex-direction: column;
   }
 }
