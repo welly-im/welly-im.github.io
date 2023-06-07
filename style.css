@@ -70,6 +70,68 @@ a:hover {
   transition: all 0.5s;
 }
 
+.header {
+  z-index: 1;
+  background-color: transparent;
+  width: 100%;
+  position: relative;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  transition: background-color 0.3s ease-in-out;
+  padding: 1% 4%;
+  display: flex;
+  align-items: center;
+}
+
+.transparent {
+  color: white !important;
+  background-color: transparent;
+  transition: all 1s;
+}
+
+.solid {
+  color: white !important;
+  background-color: #224c1a;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+a:-webkit-any-link {
+  color: inherit !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  font-weight: bold;
+  transition: all 0.5s;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 1px;
+  background-color: white;
+  margin: 3px 0;
+}
+
 main {
   display: flex;
   flex-wrap: wrap;
@@ -419,13 +481,37 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-  header {
-    z-index: 1;
-    background-color: transparent;
-    width: 100%;
-    position: relative;
-    display: none;
+  .hamburger {
+    display: flex;
   }
+  .solid {
+    color: white !important;
+    background-color: #224c1aa3;
+  }
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #224c1aa3;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  a:-webkit-any-link {
+    font-size: 14px;
+  }
+
   .text-container {
     z-index: 1;
     position: absolute;

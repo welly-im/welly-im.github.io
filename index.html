@@ -8,6 +8,11 @@
   <body>
     <header id="home">
       <nav id="navbar" class="transparent">
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
         <ul>
           <li><a href="#home" onclick="highlightElement('home')">Home</a></li>
           <li>
@@ -191,6 +196,14 @@
     <script>
       var navbar = document.getElementById("navbar");
       var scrolled = false;
+
+      function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        var navLinks = document.querySelector("nav ul");
+
+        navbar.classList.toggle("solid");
+        navLinks.classList.toggle("active");
+      }
 
       window.onscroll = function () {
         if (window.pageYOffset > 100) {
